@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder Payment Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Builder Payment Tracker</h1>
+        <form id="payment-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            
+            <label for="amount">Amount (PESOS):</label>
+            <input type="number" id="amount" required>
+            
+            <button type="submit">Add Payment</button>
+        </form>
+        
+        <table id="payment-table">
+            <thead>
+                <tr>
+                    <th>DATE</th>
+                    <th>AMOUNT (PESOS)</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Payments will be added here -->
+            </tbody>
+        </table>
+        
+        <div class="total-container">
+            <h2 id="total">TOTAL: 0 PESOS</h2>
+            <button id="print-total-button">Print Receipt</button>
+        </div>
+    </div>
+
+    <div id="receipt-modal" class="modal">
+        <div class="modal-content" id="modal-content">
+            <!-- Receipt details will be added here -->
+        </div>
+        <button id="close-modal" class="close-modal">&times;</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
